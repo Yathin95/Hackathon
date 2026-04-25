@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI Tutor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+
+    <main class="app-shell">
+        <section id="landing-screen" class="screen active">
+            <div class="glass-card hero-card">
+                <span class="badge">Agentic AI Tutor</span>
+                <h1>Learn Smarter with AI</h1>
+                <p class="subtitle">Take adaptive quizzes, identify weak areas, and generate your personalized learning path.</p>
+                <div class="field-group">
+                    <input id="topic-input" type="text" placeholder="Enter topic (DBMS, OS, CN, DSA...)" autocomplete="off">
+                    <button id="start-btn" class="btn-primary">Start Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-screen" class="screen">
+            <div class="glass-card">
+                <div class="row-between">
+                    <p id="quiz-topic" class="tag">Topic</p>
+                    <p id="progress-text" class="tag">Q1/1</p>
+                </div>
+                <h2 id="question-text" class="question"></h2>
+                <div id="options-list" class="options"></div>
+                <div class="row-between footer-row">
+                    <button id="next-btn" class="btn-primary">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-screen" class="screen">
+            <div class="glass-card">
+                <h2>Result Summary</h2>
+                <p id="score-text" class="score-text">0/0</p>
+                <div class="result-grid">
+                    <div class="mini-card">
+                        <p class="mini-title">Weak Areas</p>
+                        <ul id="weak-areas-list" class="list"></ul>
+                    </div>
+                    <div class="mini-card">
+                        <p class="mini-title">Suggested Action</p>
+                        <p id="action-text"></p>
+                    </div>
+                </div>
+                <div class="button-stack">
+                    <button id="study-plan-btn" class="btn-primary">Get AI Study Plan</button>
+                    <button id="dashboard-btn" class="btn-secondary">View Dashboard</button>
+                    <button id="restart-btn" class="btn-ghost">Take Another Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="study-plan-screen" class="screen">
+            <div class="glass-card">
+                <div class="row-between">
+                    <h2>AI Study Plan</h2>
+                    <button id="plan-to-dashboard-btn" class="btn-secondary">Dashboard</button>
+                </div>
+                <div id="study-plan-list" class="plan-grid"></div>
+            </div>
+        </section>
+
+        <section id="dashboard-screen" class="screen">
+            <div class="glass-card">
+                <div class="row-between">
+                    <h2>Learning Dashboard</h2>
+                    <button id="dashboard-restart-btn" class="btn-ghost">New Quiz</button>
+                </div>
+                <div class="stats-grid">
+                    <div class="mini-card">
+                        <p class="mini-title">Average Score</p>
+                        <p id="avg-score-text" class="stat-value">0</p>
+                    </div>
+                    <div class="mini-card">
+                        <p class="mini-title">Total Tests</p>
+                        <p id="total-tests-text" class="stat-value">0</p>
+                    </div>
+                    <div class="mini-card">
+                        <p class="mini-title">Weak Topics</p>
+                        <ul id="weak-topics-list" class="list"></ul>
+                    </div>
+                </div>
+                <div class="chart-grid">
+                    <div class="mini-card">
+                        <p class="mini-title">Score History</p>
+                        <canvas id="score-history-chart"></canvas>
+                    </div>
+                    <div class="mini-card">
+                        <p class="mini-title">Weak Topic Frequency</p>
+                        <canvas id="weak-topic-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>Talking to AI tutor...</p>
+    </div>
+
+    <div id="error-toast" class="error-toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
