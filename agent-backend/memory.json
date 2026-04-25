@@ -1,0 +1,83 @@
+{
+  "default_user": {
+    "history": [
+      {
+        "topic": "os",
+        "score": 10,
+        "total": 10
+      },
+      {
+        "topic": "dbms",
+        "score": 0,
+        "total": 10
+      },
+      {
+        "topic": "dsa",
+        "score": 0,
+        "total": 10
+      },
+      {
+        "topic": "dbms",
+        "score": 0,
+        "total": 10
+      },
+      {
+        "topic": "DBMS",
+        "score": 0,
+        "total": 10
+      }
+    ],
+    "weak_topics": [
+      "os",
+      "os",
+      "os",
+      "os",
+      "os",
+      "os",
+      "os",
+      "os",
+      "os",
+      "os",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dsa",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "dbms",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS",
+      "DBMS"
+    ]
+  }
+}
